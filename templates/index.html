@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscription</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient( black, green);
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        button{
+            border: none;
+            padding: 1.1rem;
+            border-radius: 5px;
+            margin-left: 20px;
+            color: green;
+        }
+        button:hover{
+            box-shadow: 0 0 3px 3px;
+            background-color: green;
+            color: white;
+        }
+        input{
+            border: none;
+            padding: 1.1rem;
+            border-radius: 5px;
+            margin-left: 20px;
+            color: green;
+        }
+        input:focus-within{
+            outline: 2px solid rgb(132, 185, 16);
+        }
+        h1{
+            color: white;
+            font-size: 2.3rem;
+            margin-bottom: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email testing</h1>
+
+    <div>
+      <form action="{{ url_for('join_waitlist') }}" method="POST">
+          <input type="email" name="email" placeholder="benedicta@gmail.com" required>
+          <button type="submit">Join waitlist</button>
+      </form>
+    </div>
+
+     {% with messages = get_flashed_messages(with_categories= true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+     {% endwith %}
+</body>
+</html>
