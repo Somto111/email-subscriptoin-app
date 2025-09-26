@@ -7,6 +7,11 @@ from mailchimp_marketing.api_client import ApiClientError
 from unicodedata import category
 from werkzeug.utils import redirect
 
+from flask_mail import Mail, Message
+
+# Flask-Mail config
+
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -16,6 +21,13 @@ MAILCHIMP_API_KEY = os.getenv("MAILCHIMP_API_KEY")
 MAILCHIMP_SERVER_PREFIX = os.getenv("MAILCHIMP_SERVER_PREFIX")
 MAILCHIMP_LIST_ID =  os.getenv("MAILCHIMP_LIST_ID")
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv("EMAIL_USER")   # your Gmail
+app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PASS")
+
+mail=Mail(app)
 
 client = MailchimpMarketing.Client()
 client.set_config({
@@ -26,7 +38,7 @@ client.set_config({
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
 @app.route('/join_waitlist', methods=['GET','POST'])
 def join_waitlist():
@@ -47,6 +59,14 @@ def join_waitlist():
            "email_address": email,
            "status": "subscribed"
        })
+
+        
+         # handles email from flask
+       # msg = Message("Welcome to the Waitlist!",
+       #               sender=app.config['MAIL_USERNAME'],
+       #               recipients=[email])
+       # msg.body = "Thanks for joining! We'll notify you when we launch 🚀"
+       # mail.send(msg)
 
        flash("You are on the waitlist!", "success")
        return redirect(url_for('home'))

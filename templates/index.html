@@ -1,68 +1,317 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Subscription</title>-->
+<!--    <style>-->
+<!--        body{-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            text-align: center;-->
+<!--            background: linear-gradient( black, green);-->
+<!--            background-repeat: no-repeat;-->
+<!--            height: 100vh;-->
+<!--            background-size: cover;-->
+<!--            background-position: center;-->
+<!--        }-->
+<!--        button{-->
+<!--            border: none;-->
+<!--            padding: 1.1rem;-->
+<!--            border-radius: 5px;-->
+<!--            margin-left: 20px;-->
+<!--            color: green;-->
+<!--        }-->
+<!--        button:hover{-->
+<!--            box-shadow: 0 0 3px 3px;-->
+<!--            background-color: green;-->
+<!--            color: white;-->
+<!--        }-->
+<!--        input{-->
+<!--            border: none;-->
+<!--            padding: 1.1rem;-->
+<!--            border-radius: 5px;-->
+<!--            margin-left: 20px;-->
+<!--            color: green;-->
+<!--        }-->
+<!--        input:focus-within{-->
+<!--            outline: 2px solid rgb(132, 185, 16);-->
+<!--        }-->
+<!--        h1{-->
+<!--            color: white;-->
+<!--            font-size: 2.3rem;-->
+<!--            margin-bottom: 5rem;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Email testing</h1>-->
+
+<!--    <div>-->
+<!--      <form action="{{ url_for('join_waitlist') }}" method="POST">-->
+<!--          <input type="email" name="email" placeholder="benedicta@gmail.com" required>-->
+<!--          <button type="submit">Join waitlist</button>-->
+<!--      </form>-->
+<!--    </div>-->
+
+<!--     {% with messages = get_flashed_messages(with_categories= true) %}-->
+<!--        {% if messages %}-->
+<!--            <ul>-->
+<!--                {% for category, message in messages %}-->
+<!--                    <li class="{{ category }}">{{ message }}</li>-->
+<!--                {% endfor %}-->
+<!--            </ul>-->
+<!--        {% endif %}-->
+<!--     {% endwith %}-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Subscription</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient( black, green);
-            background-repeat: no-repeat;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        button{
-            border: none;
-            padding: 1.1rem;
-            border-radius: 5px;
-            margin-left: 20px;
-            color: green;
-        }
-        button:hover{
-            box-shadow: 0 0 3px 3px;
-            background-color: green;
-            color: white;
-        }
-        input{
-            border: none;
-            padding: 1.1rem;
-            border-radius: 5px;
-            margin-left: 20px;
-            color: green;
-        }
-        input:focus-within{
-            outline: 2px solid rgb(132, 185, 16);
-        }
-        h1{
-            color: white;
-            font-size: 2.3rem;
-            margin-bottom: 5rem;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Commissioner:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https:assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>ReCircle Campus</title>
 </head>
 <body>
-    <h1>Email testing</h1>
-
-    <div>
-      <form action="{{ url_for('join_waitlist') }}" method="POST">
-          <input type="email" name="email" placeholder="benedicta@gmail.com" required>
-          <button type="submit">Join waitlist</button>
-      </form>
-    </div>
-
-     {% with messages = get_flashed_messages(with_categories= true) %}
-        {% if messages %}
-            <ul>
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
+        <nav class="nav-bar nav-container">
+            <img src="static/images/dark background brand colour and lemon green logo 1.png" alt="">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#whyUs" class="nav-link">Why us?</a></li>
+                <li class="nav-item"><a href="#bookCall" class="nav-link">Book call</a></li>
             </ul>
-        {% endif %}
-     {% endwith %}
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+    <section id="home" class="hero">
+        <div class="content">
+            <h1><span class="gradient">ReCircle campus</span> is where Nigerian students turn what they have into what they need</h1>
+            <p class="typeWriter"></p>
+            <p class="pear">Save money, cut waste, buy and sell quality College essentials, student to student</p>
+                <form class="subscribe" action="{{ url_for('join_waitlist') }}" method="post">
+                   <input type="email"  name="email" placeholder="benedicta@gmail.com" required>
+                    <button type="submit">submit</button>
+                </form>
+
+            {% with messages = get_flashed_messages(with_categories= true) %}
+                    {% if messages %}
+                        <ul>
+                            {% for category, message in messages %}
+                                <li class="flash {{ category }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+
+                    {% endif %}
+            {% endwith %}
+        </div>
+    </section>
+
+
+    <section id="whyUs" class="mission section" data-aos="fade-up" >
+        <h1>Why students love us</h1>
+        <div class="container">
+            <div class="card section" data-aos="fade-up">
+                <img src="static/images/isometric-money-background.png" alt="">
+                <h2>Budget-friendly</h2>
+                <p>Designed to match students pockets</p>
+            </div>
+            <div class="card section" data-aos="fade-up">
+                <img src="static/images/people2.png" alt="">
+                <h2>Community first</h2>
+                <p>It is not just about buying and selling, it brings an avenue for students to network and find real connections</p>
+            </div>
+            <div class="card section" data-aos="fade-up">
+                <img src="static/images/5951972851848432521_121.jpg" alt="">
+                <h2>Eco-friendly</h2>
+                <p>We are bent on creating an eco-conscious communities</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about" class="section" data-aos="fade-up">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>
+                University life is expensive, but it does not have to be,
+                ReCircle campus is your go-to student marketplace where you can find affordable deals and give your old stuff a new home.
+                We are building a culture of making, saving and supporting each other on Campus.
+            </p>
+
+            <p>We also partner with retailers, malls and brands to bring students exclusive discounts and clearance stock, giving them
+               direct access to the student market while promoting a culture of reuse. Together, we are shaping the future of a sustainable student economy.
+            </p>
+
+            <p>Overall ReCircle campus  aims to create a sustainable student economy, making life easier, more affordable, and environmentally friendly for students.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="cont section" data-aos="fade-up" >
+        <h2>How does ReCircle campus benefit students</h2>
+
+        <div class="benefit">
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Convenient marketplace</h3>
+                <p>ReCircle provides a campus-based marketplace where students can easily buy and sell items, saving  time and effort.</p>
+            </div>
+
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Sustainable Living</h3>
+                <p>By promoting reuse and recycling, ReCircle encourages sustainable living and reduces waste on campus.</p>
+            </div>
+
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Affordability</h3>
+                <p>The platform offers discounts and affordable prices, making it easier for students to access the items they need</p>
+            </div>
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Opprtunity to declutter and earn</h3>
+                <p>Students can declutter their spaces and earn money by selling items they no longer need</p>
+            </div>
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Acess to brands and retailers</h3>
+                <p>ReCircle connects students with forward-thinking brands and retailer, providing exclusive discounts and promotions</p>
+            </div>
+            <div class="benefit-card section" data-aos="fade-up">
+                <h3>Students safety</h3>
+                <p>At ReCircle Campus, safety comes firs. Every buyer and seller is part of a verified campus community, which helps create a trusted environment.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="bookCall" class="section bookcall" data-aos="fade-up" >
+        <div>
+            <p> <span>ALL USERS</span>  sign up with  their campus email, so you know you are dealing with students only</p>
+            <p>Take the hassle off your plate...want to know more?</p>
+            {% raw %}
+                <button onclick="Calendly.initPopupWidget({\"url\":\"https://calendly.com/benedictanwachukwu456\"}); return false;">Book a Call</button>
+            {% endraw %}
+        </div>
+    </section>
+
+
+
+
+    <footer>
+            <div>
+                <figure class="logotext">
+                    <img src="static/images/dark brand colour and lemon green logo.png" alt="" class="logo">
+                </figure>
+                <p>Copyright c 2025 Recircle ltd.</p>
+                <p>All rights reserved</p>
+
+                <div>
+                    <img src="/static/images/instagram.png" alt="" class="icon-img">
+                    <img src="/static/images/twitter.png" alt="" class="icon-img">
+                    <img src="/static/images/whatsapp.png" alt="" class="icon-img">
+                    <img src="/static/images/telephone.png" alt="" class="icon-img">
+                </div>
+            </div>
+
+            <div>
+                <div class="foot">
+                    <p>Company</p>
+                    <ul class="footerlink">
+                        <li><a href="#about">About us</a></li>
+                        <li> <a href="">Terms of services</a></li>
+                        <li> <a href="">Privacy policy</a></li>
+                        <li> <a href="">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-btn">
+                <p>Stay up to date</p>
+                <input type="email" placeholder="johndoe@gmail.com">
+                <button>Submit</button>
+            </div>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+    <script>
+        // hamburger
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () =>{
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        })
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // navbar
+        window.addEventListener('scroll', function(){
+            const navbar = document.querySelector('.nav-bar');
+            const scrolled = window.pageYOffset;
+
+            if (scrolled > 50) {
+                navbar.classList.add('scrolled');
+            }else{
+                navbar.classList.remove('scrolled');
+            }
+        })
+
+        //scrolled
+        AOS.init({
+            duration: 2000,
+        });
+
+        window.addEventListener("scroll", function(){
+            const navbar = document.querySelector(".nav-bar");
+            navbar.classList.toggle("scrolled",window.scrollY>50);
+        });
+
+        //typewriter
+        const text = "We're building a zero-waste, peer-to-peer marketplace where students buy, sell and exchange books, clothes, gadgets and more safely, affordably and sustainably all through local campus pick-up zones";   // the phrase
+        const typewriter = document.querySelector(".typeWriter");
+        let i = 0;  // which letter we are on
+
+        function type() {
+            if (i < text.length) {
+            typewriter.textContent += text.charAt(i); // add one letter
+            i++;
+            setTimeout(type, 50); // typing speed (100ms per letter)
+            }
+        }
+
+        type();
+    </script>
 </body>
 </html>
