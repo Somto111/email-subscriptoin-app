@@ -60,14 +60,6 @@ def join_waitlist():
            "status": "subscribed"
        })
 
-        
-         # handles email from flask
-       # msg = Message("Welcome to the Waitlist!",
-       #               sender=app.config['MAIL_USERNAME'],
-       #               recipients=[email])
-       # msg.body = "Thanks for joining! We'll notify you when we launch 🚀"
-       # mail.send(msg)
-
        flash("You are on the waitlist!", "success")
        return redirect(url_for('home'))
        # return jsonify({
