@@ -75,7 +75,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,11 +108,11 @@
 
     <section id="home" class="hero">
         <div class="content">
-            <h1><span class="gradient">ReCircle campus</span> is where Nigerian students turn what they have into what they need</h1>
+            <h1><span class="gradient">ReCircle campus</span> is where students turn what they have into what they need</h1>
             <p class="typeWriter"></p>
             <p class="pear">Save money, cut waste, buy and sell quality College essentials, student to student</p>
                 <form class="subscribe" action="{{ url_for('join_waitlist') }}" method="post">
-                   <input type="email"  name="email" placeholder="benedicta@gmail.com" required>
+                   <input type="email"  name="email" placeholder="name@gmail.com" required>
                     <button type="submit">submit</button>
                 </form>
 
@@ -193,11 +193,11 @@
                 <p>The platform offers discounts and affordable prices, making it easier for students to access the items they need</p>
             </div>
             <div class="benefit-card section" data-aos="fade-up">
-                <h3>Opprtunity to declutter and earn</h3>
+                <h3>Opportunity to declutter and earn</h3>
                 <p>Students can declutter their spaces and earn money by selling items they no longer need</p>
             </div>
             <div class="benefit-card section" data-aos="fade-up">
-                <h3>Acess to brands and retailers</h3>
+                <h3>Access to brands and retailers</h3>
                 <p>ReCircle connects students with forward-thinking brands and retailer, providing exclusive discounts and promotions</p>
             </div>
             <div class="benefit-card section" data-aos="fade-up">
@@ -232,9 +232,15 @@
                 <p>All rights reserved</p>
 
                 <div>
-                    <img src="/static/images/instagram.png" alt="" class="icon-img">
-                    <img src="/static/images/twitter.png" alt="" class="icon-img">
-                    <img src="/static/images/whatsapp.png" alt="" class="icon-img">
+                    <a href="https://www.instagram.com/recirclecampus">
+                       <img src="/static/images/instagram.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.facebook.com/recirclecampus">
+                        <img src="/static/images/twitter.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.linkedin.com/company/recircle-campus">
+                        <img src="/static/images/whatsapp.png" alt="" class="icon-img">
+                    </a>
                     <img src="/static/images/telephone.png" alt="" class="icon-img">
                 </div>
             </div>
