@@ -57,7 +57,6 @@ def home():
 
 @app.route('/send_message', methods=['POST'])
 def send_message():
-    """Send message to Telegram"""
     data = request.json
     user_message = data.get("message")
 

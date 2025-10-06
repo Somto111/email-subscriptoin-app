@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Commissioner:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https:assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
     <title>ReCircle Campus</title>
 </head>
 <body>
@@ -36,7 +38,7 @@
             <h1><span class="gradient">ReCircle campus</span> is where students turn what they have into what they need</h1>
             <p class="typeWriter"></p>
             <p class="pear">Save money, cut waste, buy and sell quality College essentials, student to student</p>
-                <form class="subscribe" action="{{ url_for('join_waitlist') }}" method="post">
+                <form class="subscribe" action="{{ url_for('join_waitlist') }}" method="POST">
                    <input type="email"  name="email" placeholder="name@gmail.com" required>
                     <button type="submit">submit</button>
                 </form>
@@ -140,7 +142,7 @@
             <p> <span>ALL USERS</span>  sign up with  their campus email, so you know you are dealing with students only</p>
             <p>Take the hassle off your plate...want to know more?</p>
             {% raw %}
-                <button onclick="Calendly.initPopupWidget({\"url\":\"https://calendly.com/benedictanwachukwu456\"}); return false;">Book a Call</button>
+                <button onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/benedictanwachukwu456' }); return false;">Book a Call</button>
             {% endraw %}
         </div>
     </section>
