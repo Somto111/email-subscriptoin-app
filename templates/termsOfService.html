@@ -2,13 +2,340 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Commissioner:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <title>Terms of Service</title>
 </head>
-<body>
-    <div>
-        <h1>Terms and Conditions</h1>
-        <p>Effective Date: 01/09/2025</p>
-        <P
+<body >
+    <div class="terms">
+        <nav class="nav-bar nav-container">
+                <img src="static/images/dark background brand colour and lemon green logo 1.png" alt="">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="{{ url_for('brands') }}" class="nav-link">For Brands</a></li>
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Book call</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+        </nav>
+
+        <div class="terms-header">
+            <h1>Terms and Conditions</h1>
+        </div>
+
+        <div class="terms-address">
+            <p> <span>Effective Date: </span> 01/09/2025</p>
+            <p> <span>Company: </span> ReCircle Campus Ventures </p>
+            <p> <span>Registered Address: </span> 16 ENOBONG NYA STREET, IKOT-AKPANABIA, UYO, AKWA IBOM STATE, NIGERIA</p>
+            <p> <span>Contact: </span> support@recirclecampus.com</p>
+        </div>
+
+        <div class="terms-about">
+            <h2>1. About these Terms</h2>
+            <p>1.1 These Terms and conditions ("Terms") govern your use of thhe ReCircle Campus mobile application ("App")
+                and marketplace services ("services") </p>
+            <p>1.2 By downloading, accessing, or using the App/Service, you agree to these Terms. If you do not agreee, do not use the App/Service.</p>
+            <p>1.3 We recommend you keep a copy of these Terms for your redords. </p>
+            <p>1.4 If you are using the service on behalf of a business be informed that these Terms constitute the entire agreement betweeen that business and us regarding the Service.  </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>2. Who we are and how to contact us </h2>
+            <p>2.1 We are <span>ReCircle Campus Ventures,</span> incorporated in Nigeria. <span>BN: 8781965</span> </p>
+            <p>We operate a <span>zero-waste student marketplace</span> that matches relevant buyers and sellers.
+            (Students, university staff, and approved business partners), displays listings to relevant users, and facilitates <span>in-app payments and escrow-protected hand-overs.</span> </p>
+            <p>2.3 Contact us at support@recirclecampus.com. We may contact you by email, phone, SMS, or in-App notifications. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>3. Privacy and data protection </h2>
+            <p>Your privacy matters. See our <span> <a href="privacypolicy.html">Privacy Policy</a></span>. It explains what we collect, why we collect it, who we share it with (e.g., payment processors), and your rights. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>4. Other applicable terms </h2>
+            <p>These Terms incorporate our <span>Privacy Policy, Prohibited Items Policy, Community & Safety Guidelines,</span>  and any campus-specific rules shown in-App. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>5. App updates & Service changes </h2>
+            <p>5.1 We may update the App/Service to improve performance, add features, or address security/OS changes. </p>
+            <p>5.2 If you refuse updates, some or all functionalities may stop working. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>6. Changes to these Terms </h2>
+            <p>6.1 We may update these Terms. We'll give reasonable notice (7 days) via email or in-App where feasible. </p>
+            <p>6.2 Where you continue to use the Service after changes to these Terms take effect, you will be deemed to have accepted the updated Terms. If you do not agree with the updated Terms, you must stop using the Service. In such cases, we may deactivate your listings or suspend/terminate your account.</p>
+        </div>
+
+        <div class="terms-about">
+            <h2>7. If the device is not yours </h2>
+            <p>You must have the owner's permission to install/use the App on any device you do not own. You are responsible for complying with these Terms. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>8. Third-party links </h2>
+            <p>The App/Service may link to independent websites we do not control. Use them at your own discretion. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>9. Account creation and eligibility </h2>
+            <p>9.1 Download the App and register an account. Students should use a verified <span> university email</span> (where supported) and may be asked for student ID verification. </p>
+            <p>9.2 Keep your email active and your details accurate. Keep your login secure and do not share credentials. </p>
+            <p>9.3 Notify us immediately at <span>support@recirclecampus.com</span> if you suspect any unauthorized access. </p>
+            <p>9.4 Age: You must be 18+ and legally capable of entering a binding agreement in your country. </p>
+            <p>9.5 We may suspend/disable accounts that breach these Terms. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>10. Marketplace & payments (in-app only) </h2>
+            <p>10.1 The Service enables students/staff to buy/sell items to/from each other and approved businesses on campus or campus pick-up zones. </p>
+            <p>10.2 <span>Listing items:</span> You can list items with accurate photos, titles, and descriptions <span>(“Sale Item”)</span>. A purchase creates a Transaction between <span> (“Buyer”) and (“Seller”).</span> </p>
+            <p>10.3 <span>In-App Only:</span> All Transactions must be completed within the App using our approved payment partners <span>(e.g., Paystack, Flutterwave, Interswitch, etc.). Off-platform payments are prohibited.</span>  </p>
+            <p>10.4 <span>Payment processing:</span> By using in-App payments, you agree to the relevant payment processor's terms. You authorise us and the processor to securely share data and payment instructions needed to complete Transactions and payouts. </p>
+            <div>
+                <p>10.5 <span>Escrow and hand-off:</span> </p>
+                <ul class="terms-ul">
+                    <li>Buyer's payment is held in escrow. </li>
+                    <li>At meet-up/hand-off in <span>a safe, public, campus-approved pick-up zone, </span>the Buyer shows a one-time QR/OTP. </li>
+                    <li>The Seller scans/inputs the QR/OTP <span>at hand-off.</span> On successful verification, escrow releases funds to the Seller (minus any fees). </li>
+                    <li>If the QR/OTP isn't successfully verified within <span>(7 days)</span> of payment, the escrow is <span>automatically returned</span> to the Buyer. </li>
+                    <p>We may, at our sole discretion, complete or reverse a payment if credible proof of delivery/collection is provided (e.g., campus security confirmation, chat logs, timestamped photos). </p>
+
+                </ul>
+            </div>
+            <p>10.6	<span>No off-App deals:</span> Do not solicit or complete payments outside the App. We may suspend/terminate accounts and remove listings for attempting to bypass in-App payments. </p>
+            <p>10.7	<span>Contracting parties:</span> Except where we act as a Seller/Buyer, the sale contract is solely between Buyer and Seller. We are not a party and do not guarantee description, quality, legality, or fitness of items. </p>
+            <p>10.8	<span>Compliance:</span> You are responsible for complying with all applicable laws for your listings and transactions. </p>
+            <p>10.9	<span>Safety:</span> Exercise caution at meet-ups. Meet in daylight, public/campus-approved locations, and avoid going alone. We are not responsible for conduct of users at, before, or after meet-ups. </p>
+            <p>10.10 <span> No financial info sharing: </span> Never share your card/bank details with other users.</p>
+            <p>10.11 <span>Indemnity:</span> You will indemnify ReCircle Campus for losses resulting from breaches of clauses 10.3-10.10. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>Content and IP</h2>
+            <p>11.1 We own or license all IP in the App/Service (excluding user content). </p>
+            <p>11.2 We grant you a personal, non-transferable license to use the App/Service in accordance with these Terms. </p>
+            <p>11.3 Do not modify or separate our graphics/content from accompanying text; always credit us where required. </p>
+            <p>11.4 <span>Your content (“User Content”):</span> You warrant your listings and uploads comply with these
+            Terms. You grant us a worldwide, non-exclusive, royalty-free, transferable, sub-licensable, irrevocable, perpetual license to host, use, reproduce, adapt, and display your User Content to operate and promote the Service. </p>
+            <p>11.5 We may disclose your identity to third parties who claim User Content violates rights or privacy. Such disclosure shall be subject to due process and applicable data protection safeguards.</p>
+            <p>11.6 We do not pre-moderate User Content but may remove content that breaches these Terms. You are responsible for backing up your content. </p>
+            <p>11.7 We do not host extremist/terrorist content. </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>12. Acceptable Use </h2>
+            <div>
+                <p>12.1 You (and, where relevant, your employees/agents) must not: </p>
+                <ul class="terms-ul">
+                    <li>Use the App/Service for unlawful purposes or introduce malware</li>
+                    <li>Infringe IP or privacy rights; </li>
+                    <li>Upload defamatory, harassing, hateful, pornographic, or violent content;</li>
+                    <li>Overload or interfere with the Service</li>
+                    <li>Scrape/hervest data without consent;</li>
+                    <li>Create multiple accounts to manipulate ratings or evade enforcement;</li>
+                    <li>Provide false information;</li>
+                    <li>Share accounts;</li>
+                    <li>Spam;</li>
+                    <li>Manipulate, feedback/ratings;</li>
+                    <li>List Prohibited Items(see 13);</li>
+                    <li>Bypass commissions/ffees or in-App payments;</li>
+                    <li>Post personal data of others without consent</li>
+                </ul>
+            </div>
+            <p>12.2	<span>You also agree not to:</span> rent, lease, sub-license, copy except for normal use/backup, reverse engineer, or combine our code with other software except where permitted by applicable law. </p>
+            <p>12.3	<span>Enforcement:</span> We may warn, remove content/listings, suspend, or terminate accounts; pursue legal action; and/or report to authorities. </p>
+            <p>12.4	User opinions on the App don't represent our views. Report concerns to <span>(support@recirclecampus.com).</span> </p>
+        </div>
+
+        <div class="terms-about">
+            <h2>Prohibited Items</h2>
+            <div>
+                <p>You must not list, buy, or sell:</p>
+                <ul class="terms-ul">
+                    <li>Illegal, stolen or unsafe googs;</li>
+                    <li><span>Weapons,</span> ammunition, explosives, fireworks;</li>
+                    <li><span>Drugs,</span> narcotics, drug paraphernalia;</li>
+                    <li><span>Alcohol,</span> tobacco/vapes, or age-restricted substances; </li>
+                    <li><span>Prescription medicines,</span> medical devices without approvals; </li>
+                    <li><span>Counterfeit/fake</span> or pirated goods; fake IDs/certificates; </li>
+                    <li><span>Academic work</span> (essays/exams/assignments), leaked materials, or cheating services; </li>
+                    <li>Hazardous chemicals; recalled items; </li>
+                    <li>Live animals, wildlife products prohibited by law; </li>
+                    <li>Adult sexual content/services; </li>
+                    <li>Any item prohibited by campus policy or Nigerian law. </li>
+                </ul>
+            </div>
+        </div>
+
+        <div  class="terms-about">
+            <h2>14. Fees and commission </h2>
+            <p>14.1 <span>Seller commission:</span> For each completed Transaction, the Seller pays a commission of <span>(10%)</span> of the gross sale price (taxes included, if applicable). </p>
+            <p>14.2 Payment processor fees are charged per their terms and may be deducted before payout. </p>
+            <p>14.3 We may change fees with notice via in-App/email. </p>
+            <p>14.4 Businesses must pay all amounts due without set-off or deduction (save as required by law). </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>15. Refunds, returns and disputes (item issues) </h2>
+            <div>
+                <p>15.1 If a Sale item materially <span>does not match</span> its listing (description, quality, authenticity): </p>
+                <ul class="terms-ul">
+                    <li><span>Buyer-Seller (both students/staff):</span> Raise an in-App dispute within <span>(7 days)</span> of hand-off (or payment if hand-off not completed). Provide evidence (photos, chat, timestamps). We may mediate; outcomes may include refund, partial refund, or return at Seller's cost. </li>
+                    <li><span>Business Seller:</span> Contact us via in-App; we will liaise with the business and manage refunds as applicable. </li>
+                </ul>
+            </div>
+            <p>15.2	If hand-off did not occur (QR/OTP not verified), escrow auto-refunds to Buyer at <span>(7 days).</span> </p>
+            <p>15.3	We are not obliged to intervene in quality disputes between private users but may do so to preserve marketplace integrity. </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>16. Compliance: payments, KYC and AML/CFT </h2>
+            <p>16.1 We align with applicable <span>Central Bank of Nigeria (CBN) and Nigerian Inter-Bank Settlement System (NIBSS)</span> rules through approved payment partners. </p>
+            <p>16.2 You may be asked to complete KYC (ID, selfie, student ID) and provide information for <span>AML/CFT</span> checks. Failure may delay or block payouts or lead to account suspension. </p>
+            <p>16.3 We may freeze, delay, or reverse payments if required by law, court order, campus policy, or to investigate suspected fraud. </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>17. Ending or restricting your use </h2>
+            <p>17.1 You may request account deactivation via <span>(support@recirclecampus.com)</span> from your registered email. </p>
+            <p>17.2 We may suspend/terminate your account or withdraw the Service if you breach these Terms, if required by law/campus policy, or for operational/security reasons. </p>
+            <p>17.3 On termination, stop using the App, delete it from your devices, and we may block access to your account. </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>18. Our responsibility to you </h2>
+            <p>18.1 Except where we are a Seller/Buyer, we're not a party to sale contracts and are not liable for items, user conduct, or off-App interactions. </p>
+            <p>18.2 The App/Service are provided “as is”. We do not guarantee uninterrupted or error-free operation or that content is accurate, complete, or current. </p>
+            <p>18.3 We don't guarantee the App is virus-free; use reputable security software. </p>
+            <p>18.4 We don't control third-party links/services. </p>
+            <p>18.5 We do not exclude or limit liability where it would be unlawful (e.g., death/personal injury caused by our negligence, fraud). </p>
+            <p>18.6 <span>Consumers:</span> We are responsible for foreseeable, direct loss caused by our breach or lack of reasonable care/skill; not for indirect, unforeseeable, business losses or consequential damages. </p>
+            <p>18.7 <span>Business users:</span> To the fullest extent permitted by law, we exclude implied terms and limit our total liability per transaction to the total <span>commission</span> paid for that transaction; no liability for lost profit or indirect/consequential loss. </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>19. Resolving disputes </h2>
+            <p>19.1 <span>With us:</span> Contact <span>(support@recirclecampus.com).</span> We'll try to resolve amicably. </p>
+            <p>19.2 <span>With other users:</span> Your contract is with the other user (unless we are the Seller/Buyer). Use in-App dispute tools; we may mediate but are not obliged to resolve private-party disputes. </p>
+        </div>
+
+        <div  class="terms-about">
+            <h2>General</h2>
+            <p>20.1 We're not responsible for events outside our control; we will take reasonable steps to minimize impact and keep you informed. </p>
+            <p>20.2 We may transfer our rights/obligations to another entity; we will notify you if this happens. </p>
+            <p>20.3 You may not transfer your rights/obligations without our written consent. </p>
+            <p>20.4 Each clause operates separately; if one is invalid, the rest remain effective. </p>
+            <p>20.5 Delays in enforcing these Terms don't waive our rights. </p>
+            <p>20.6 <span>Governing law & jurisdiction:</span> These Terms are governed by the laws of the <span>Federal Republic of Nigeria.</span> Disputes are subject to the exclusive jurisdiction of the <span>Nigerian courts</span> (unless mandatory consumer protection law provides otherwise). </p>
+            <p>20.7 Campus-specific rules (if any) form part of these Terms where notified in-App.</p>
+        </div>
+
     </div>
+
+     <footer>
+            <div>
+                <figure class="logotext">
+                    <img src="static/images/dark brand colour and lemon green logo.png" alt="" class="logo">
+                </figure>
+                <p>Copyright c 2025 Recircle ltd.</p>
+                <p>All rights reserved</p>
+
+                <div>
+                    <a href="https://www.instagram.com/recirclecampus">
+                       <img src="images/instagram.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.facebook.com/recirclecampus">
+                        <img src="images/twitter.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.linkedin.com/company/recircle-campus">
+                        <img src="images/whatsapp.png" alt="" class="icon-img">
+                    </a>
+                    <img src="images/telephone.png" alt="" class="icon-img">
+                </div>
+            </div>
+
+            <div>
+                <div class="foot">
+                    <p>Company</p>
+                    <ul class="footerlink">
+                        <li><a href="#about">About us</a></li>
+                        <li> <a href="{{ url_for('terms') }}">Terms of services</a></li>
+                        <li> <a href="{{ url_for('policy') }}">Privacy policy</a></li>
+                        <li> <a href="">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-btn">
+                <p>Stay up to date</p>
+                <input type="email" placeholder="johndoe@gmail.com">
+                <button>Submit</button>
+            </div>
+    </footer>
+
+    </div>
+
+   <script>
+        // hamburger
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () =>{
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        })
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // navbar
+        window.addEventListener('scroll', function(){
+            const navbar = document.querySelector('.nav-bar');
+            const scrolled = window.pageYOffset;
+
+            if (scrolled > 50) {
+                navbar.classList.add('scrolled');
+            }else{
+                navbar.classList.remove('scrolled');
+            }
+        })
+
+        //scrolled
+        AOS.init({
+            duration: 2000,
+        });
+
+        window.addEventListener("scroll", function(){
+            const navbar = document.querySelector(".nav-bar");
+            navbar.classList.toggle("scrolled",window.scrollY>50);
+        });
+
+        //typewriter
+        const text = "We're building a zero-waste, peer-to-peer marketplace where students buy, sell and exchange books, clothes, gadgets and more safely, affordably and sustainably all through local campus pick-up zones";   // the phrase
+        const typewriter = document.querySelector(".typeWriter");
+        let i = 0;  // which letter we are on
+
+        function type() {
+            if (i < text.length) {
+            typewriter.textContent += text.charAt(i); // add one letter
+            i++;
+            setTimeout(type, 50); // typing speed (100ms per letter)
+            }
+        }
+
+        type();
+   </script>
 </body>
 </html>

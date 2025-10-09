@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Commissioner:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <title>For Brands</title>
+</head>
+<body class="bg">
+    <nav class="nav-bar nav-container">
+            <img src="static/images/dark background brand colour and lemon green logo 1.png" alt="">
+            <ul class="nav-menu">
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="{{ url_for('brands') }}" class="nav-link">For Brands</a></li>
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Book call</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </nav>
+
+
+
+
+
+
+    <div class="brand">
+
+        <div class="brands-image">
+            <img src="static/images/Generated Image October 08, 2025 - 3_35PM.png" alt="">
+        </div>
+
+        <div class="brand-text">
+            <h1>Partner With Us</h1>
+            <p>At ReCircle Campus, we're building more than a marketplace. We are creating a sustainable student economy that connects students, brands, and communications in a culture of reuse.</p>
+            <h2>Why partner with us?</h2>
+            <p>Direct Access to students: Connect with over 2 million Nigerian university students through pop-up markets, digital resale groups, and our online platform.</p>
+            <p>Move stock faster: Clear discounted or seasonal inventory by selling directly to students who are actively looking for affordable essentials.</p>
+            <p>Boost your brand image: Position your company as student-friendly and sustainability-driven, building long-term loyalty.</p>
+            <p>Drive community impact: support students in saving money, reducing waste, and living sustainably.</p>
+            <p>By partnering with ReCircle Campus, you're not just selling products, you are investing in the future of a circular, student-powered economy. Together, we can turn what students have into what they need, while shaping  a more affordable and sustainable future. </p>
+            <button>Contact us to find more</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+            <div>
+                <figure class="logotext">
+                    <img src="static/images/dark brand colour and lemon green logo.png" alt="" class="logo">
+                </figure>
+                <p>Copyright c 2025 Recircle ltd.</p>
+                <p>All rights reserved</p>
+
+                <div>
+                    <a href="https://www.instagram.com/recirclecampus">
+                       <img src="images/instagram.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.facebook.com/recirclecampus">
+                        <img src="images/twitter.png" alt="" class="icon-img">
+                    </a>
+                    <a href="https://www.linkedin.com/company/recircle-campus">
+                        <img src="images/whatsapp.png" alt="" class="icon-img">
+                    </a>
+                    <img src="images/telephone.png" alt="" class="icon-img">
+                </div>
+            </div>
+
+            <div>
+                <div class="foot">
+                    <p>Company</p>
+                    <ul class="footerlink">
+                        <li><a href="#about">About us</a></li>
+                        <li> <a href="{{ url_for('terms') }}">Terms of services</a></li>
+                        <li> <a href="{{ url_for('policy') }}">Privacy policy</a></li>
+                        <li> <a href="">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-btn">
+                <p>Stay up to date</p>
+                <input type="email" placeholder="johndoe@gmail.com">
+                <button>Submit</button>
+            </div>
+    </footer>
+
+
+    <script>
+         // hamburger
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () =>{
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        })
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // navbar
+        window.addEventListener('scroll', function(){
+            const navbar = document.querySelector('.nav-bar');
+            const scrolled = window.pageYOffset;
+
+            if (scrolled > 50) {
+                navbar.classList.add('scrolled');
+            }else{
+                navbar.classList.remove('scrolled');
+            }
+        })
+
+        //scrolled
+        AOS.init({
+            duration: 2000,
+        });
+
+        window.addEventListener("scroll", function(){
+            const navbar = document.querySelector(".nav-bar");
+            navbar.classList.toggle("scrolled",window.scrollY>50);
+        });
+
+        //typewriter
+        const text = "We're building a zero-waste, peer-to-peer marketplace where students buy, sell and exchange books, clothes, gadgets and more safely, affordably and sustainably all through local campus pick-up zones";   // the phrase
+        const typewriter = document.querySelector(".typeWriter");
+        let i = 0;  // which letter we are on
+
+        function type() {
+            if (i < text.length) {
+            typewriter.textContent += text.charAt(i); // add one letter
+            i++;
+            setTimeout(type, 50); // typing speed (100ms per letter)
+            }
+        }
+
+        type();
+    </script>
+</body>
+</html>

@@ -241,6 +241,19 @@ def join_waitlist():
 
 
 
+
+@app.route('/forBrands')
+def brands():
+    return render_template('forBrands.html')
+
+@app.route('/terms')
+def terms():
+    return render_template('termsOfService.html')
+
+@app.route('/privacyPolicy')
+def policy():
+    return render_template('privacyPolicy.html')
+
 if __name__ == '__main__':
     print("🚀 Starting Flask app with Telegram polling...")
     print(f"📱 Monitoring Telegram chat: {CHAT_ID}")
