@@ -12,7 +12,9 @@
 <body >
     <div class="terms">
         <nav class="nav-bar nav-container">
-                <img src="static/images/dark background brand colour and lemon green logo 1.png" alt="">
+                <a href="{{ url_for('home') }}">
+                    <img src="static/images/dark background brand colour and lemon green logo 1.png" alt="">
+                </a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">About</a></li>
@@ -57,16 +59,16 @@
 
         <div class="terms-about">
             <h2>3. Privacy and data protection </h2>
-            <p>Your privacy matters. See our <span> <a href="privacypolicy.html">Privacy Policy</a></span>. It explains what we collect, why we collect it, who we share it with (e.g., payment processors), and your rights. </p>
+            <p>Your privacy matters. See our <span> <a href="{{ url_for('policy') }}">Privacy Policy</a></span>. It explains what we collect, why we collect it, who we share it with (e.g., payment processors), and your rights. </p>
         </div>
 
         <div class="terms-about">
             <h2>4. Other applicable terms </h2>
-            <p>These Terms incorporate our <span>Privacy Policy, Prohibited Items Policy, Community & Safety Guidelines,</span>  and any campus-specific rules shown in-App. </p>
+            <p>These Terms incorporate our <span>Privacy Policy, Prohibited Items Policy, Community and Safety Guidelines,</span>  and any campus-specific rules shown in-App. </p>
         </div>
 
         <div class="terms-about">
-            <h2>5. App updates & Service changes </h2>
+            <h2>5. App updates and Service changes </h2>
             <p>5.1 We may update the App/Service to improve performance, add features, or address security/OS changes. </p>
             <p>5.2 If you refuse updates, some or all functionalities may stop working. </p>
         </div>
@@ -97,7 +99,7 @@
         </div>
 
         <div class="terms-about">
-            <h2>10. Marketplace & payments (in-app only) </h2>
+            <h2>10. Marketplace and payments (in-app only) </h2>
             <p>10.1 The Service enables students/staff to buy/sell items to/from each other and approved businesses on campus or campus pick-up zones. </p>
             <p>10.2 <span>Listing items:</span> You can list items with accurate photos, titles, and descriptions <span>(“Sale Item”)</span>. A purchase creates a Transaction between <span> (“Buyer”) and (“Seller”).</span> </p>
             <p>10.3 <span>In-App Only:</span> All Transactions must be completed within the App using our approved payment partners <span>(e.g., Paystack, Flutterwave, Interswitch, etc.). Off-platform payments are prohibited.</span>  </p>
@@ -237,7 +239,7 @@
             <p>20.3 You may not transfer your rights/obligations without our written consent. </p>
             <p>20.4 Each clause operates separately; if one is invalid, the rest remain effective. </p>
             <p>20.5 Delays in enforcing these Terms don't waive our rights. </p>
-            <p>20.6 <span>Governing law & jurisdiction:</span> These Terms are governed by the laws of the <span>Federal Republic of Nigeria.</span> Disputes are subject to the exclusive jurisdiction of the <span>Nigerian courts</span> (unless mandatory consumer protection law provides otherwise). </p>
+            <p>20.6 <span>Governing law and jurisdiction:</span> These Terms are governed by the laws of the <span>Federal Republic of Nigeria.</span> Disputes are subject to the exclusive jurisdiction of the <span>Nigerian courts</span> (unless mandatory consumer protection law provides otherwise). </p>
             <p>20.7 Campus-specific rules (if any) form part of these Terms where notified in-App.</p>
         </div>
 

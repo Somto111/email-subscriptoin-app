@@ -143,7 +143,7 @@ a{
 }
 .content p{
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #daec00;
 }
 .pear{
@@ -293,7 +293,6 @@ a{
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-    min-height: 80vh;
 
 }
 #about img{
@@ -304,16 +303,24 @@ a{
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: #0d594c;
+    box-shadow: 3px 3px 3px 3px;
 }
 .text h1{
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 1.5rem;
+    color: #0d594c;
 }
 .text p{
     display: flex;
+    flex-direction:column;
     justify-content:flex-start;
     align-items: center;
 }
+
 
 
 
@@ -346,6 +353,7 @@ a{
 .mission h1{
     margin-top: 3rem;
     font-size: 2.5rem;
+
 }
 .safe{
     min-height: 445.05px;
@@ -791,7 +799,8 @@ body.show-chatbot .chatbot-popup{
 .terms{
     padding: 1.5rem;
     padding-top: 6rem;
-    background: linear-gradient(150deg,#0d594c,#daec00);
+    background-color: rgb(40, 40, 40);
+    color: white;
 }
 .terms-header  h1{
     justify-content: center;
@@ -799,6 +808,7 @@ body.show-chatbot .chatbot-popup{
     text-align: center;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    color: #daec00;
 }
 .terms-address{
     display: flex;
@@ -815,6 +825,7 @@ body.show-chatbot .chatbot-popup{
 }
 .terms-about h2{
     margin-bottom: 1.5rem;
+    color: #daec00;
 }
 .terms-ul{
     padding-left: 2rem;
@@ -890,28 +901,42 @@ body.show-chatbot .chatbot-popup{
    background-color: #188472;
 }
 
-@media (min-width: 769px) and (max-width: 1024px){
+
+
+@media (min-width: 769px) and (max-width: 1300px){
     .brand{
         flex-direction: column;
     }
     .safe{
         min-height: 287px;
     }
+    .bookcall{
+    min-height: none;
+    }
+    .mission h1{
+        font-size: 1.5rem;
+        color: #0d594c;
+    }
+    .card h2{
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        color: #0d594c;
+    }
+    .content{
+        margin-top: 3rem;
+    }
 }
 
 
 @media (min-width: 481px) and (max-width: 768px){
     .brands-image img{
-        border-radius: 40%;
+        border-radius: 35%;
         width: 100%;
+        min-width: 400px;
+        height: 400px;
         object-fit: cover;
-        display: none;
-    }
-    .bg{
-        background-image: url('../images/Generated\ Image\ October\ 08\,\ 2025\ -\ 7_03PM.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 20%;
+        padding-left: 0;
+        margin-left: 0;
     }
     .brands{
         padding-top: 0rem;
@@ -986,34 +1011,159 @@ body.show-chatbot .chatbot-popup{
         width: 95%;
         margin-top: 3rem;
     }
+    .content p{
+        font-size: 1rem;
+    }
     .hero{
         padding: 1rem;
     }
     .brand{
         flex-direction: column;
     }
+    .mission h1{
+        font-size: 2.5rem;
+        color: #0d594c;
+    }
+    .card h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        color: #0d594c;
+    }
+
 }
 
 @media (min-width: 351px) and (max-width: 480px){
-    .brands-image img{
-        border-radius: 40%;
-        width: 100%;
-        object-fit: cover;
-        display: none;
+    /* navbar */
+    .hamburger{
+        display: block;
     }
-    .bg{
-        background-image: url('../images/Generated\ Image\ October\ 08\,\ 2025\ -\ 7_03PM.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 22%;
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px)rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateZ(-8px)rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        background-color:  #0d594c;
+        backdrop-filter: blur(2px);
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: #0d594c;
+    }
+
+
+
+    /* Home */
+    .gradient{
+        font-size: 2rem;
+    }
+    .cont h2{
+        font-size: 2rem;
+    }
+    /*
+    .typeWriter{
+        width: 100%;
+        font-size: 10px;
+    }*/
+    .content p{
+       font-size: 0.5rem;
+    }
+    .hero{
+        min-height: 80vh;
+    }
+    .content{
+        margin-top: 2rem;
+        min-width: 90%;
+    }
+    .content h1{
+        font-size: 1.5rem;
+    }
+    .pear{
+        margin-top: 2rem;
+        font-size: 10px;
+    }
+    .subscribe {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .subscribe button{
+        width: 100px;
+        min-height: 20px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+
+
+    /* why students */
+    .mission h1{
+        font-size: 2rem;
+        color: #0d594c;
+    }
+    .card{
+       width: 80%;
+    }
+    .card h2{
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+        color: #0d594c;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* About */
+    .text p{
+        width: 100%;
+    }
+
+    /* Benefits */
+    .benefit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+    }
+
+    /* brands */
+    .brands-image img{
+        border-radius: 35%;
+        width: 100%;
+        min-width: 300px;
+        height: 300px;
+        object-fit: cover;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .brands-img{
+        margin-top: 3rem;
     }
     .brand{
         padding: 0.5rem;
-        padding-top: 1.5rem;
+        margin-top: 3.8rem;
         gap: 0.8rem;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 2.5rem;
     }
     .brand-text{
         display: flex;
@@ -1031,92 +1181,11 @@ body.show-chatbot .chatbot-popup{
     .brand-text p{
         font-size: 15px;
     }
-    .text p{
-        width: 100%;
-    }
     .safe{
         min-height: 300px;
     }
 
-
-    .hamburger{
-        display: block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px)rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateZ(-8px)rotate(-45deg);
-    }
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        transition: 0.5s ease-in-out;
-        background-color:  #0d594c;
-        backdrop-filter: blur(2px);
-    }
-    .nav-menu.active{
-        left: 0;
-    }
-    .nav-item{
-        margin: 16px 0;
-        color: #0d594c;
-    }
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-    .container{
-        flex-direction: column;
-        align-items: center;
-    }
-    .card{
-       width: 80%;
-    }
-    .benefit{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0px;
-    }
-    .gradient{
-        font-size: 2.5rem;
-    }
-    .cont h2{
-        font-size: 2rem;
-        padding: 10px;
-    }
-    .typeWriter{
-        width: 100%;
-        font-size: 10px;
-    }
-    .content{
-
-    }
-    .hero{
-
-    }
-    .content h1{
-        font-size: 1.5rem;
-    }
-    .pear{
-        margin-top: 2rem;
-        font-size: 10px;
-    }
-    .subscribe {
-        width: 100%;
-        margin-top: 2rem;
-    }
+    /* chatbot */
     .chat-body{
         height: 300px;
         margin-left: 0.5rem;
@@ -1124,28 +1193,31 @@ body.show-chatbot .chatbot-popup{
     .chatbot-popup{
         width: 300px;
     }
-    .text p{
-        width: 100%;
+
+    /* footer */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 }
 @media (max-width: 350px){
+    /* forbrands */
     .brands-image img{
-        border-radius: 40%;
+        border-radius: 35%;
         width: 100%;
+        min-width: 300px;
+        height: 300px;
         object-fit: cover;
-        display: none;
-    }
-    .bg{
-        background-image: url('../images/Generated\ Image\ October\ 08\,\ 2025\ -\ 7_03PM.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 22%;
+        padding-left: 0;
+        margin-left: 0;
     }
     .brand{
         padding: 0.5rem;
         padding-top: 5.5rem;
         gap: 0.8rem;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -1165,14 +1237,11 @@ body.show-chatbot .chatbot-popup{
     .brand-text p{
         font-size: 10px;
     }
-    .text p{
-        width: 100%;
-    }
     .safe{
         min-height: 206px;
     }
 
-
+    /* navbar */
     .hamburger{
         display: block;
     }
@@ -1204,25 +1273,10 @@ body.show-chatbot .chatbot-popup{
         margin: 16px 0;
         color: #0d594c;
     }
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-    .container{
-        flex-direction: column;
-        align-items: center;
-    }
-    .card{
-       width: 80%;
-    }
-    .benefit{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0px;
-    }
+
+
+
+    /* Home */
     .gradient{
         font-size: 1.5rem;
     }
@@ -1252,6 +1306,53 @@ body.show-chatbot .chatbot-popup{
         width: 100%;
         margin-top: 1.5rem;
     }
+    .subscribe button{
+        width: 100px;
+        min-height: 20px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+
+    /* why students */
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .mission h1{
+        font-size: 1.5rem;
+        color: #0d594c;
+    }
+    .card{
+       width: 80%;
+    }
+    .card h2{
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+        color: #0d594c;
+    }
+    .card p{
+        font-size: 0.7rem;
+    }
+
+
+    /* about */
+    .text p{
+        width: 100%;
+    }
+
+
+    /* Benefits */
+    .benefit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+    }
+
+
+    /* chatbot */
     .chat-body{
         height: 250px;
         margin-left: 0.5rem;
@@ -1259,8 +1360,13 @@ body.show-chatbot .chatbot-popup{
     .chatbot-popup{
         width: 250px;
     }
-    .text p{
-        width: 100%;
+
+
+    /* footer */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 }
 
