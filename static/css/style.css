@@ -9,7 +9,10 @@ body{
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
-
+.strong{
+    color: #daec00;
+    font-weight: bold;
+}
 
 /* header */
 .nav-container{
@@ -295,7 +298,6 @@ a{
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-
 }
 #about img{
     max-width: 100%;
@@ -411,6 +413,7 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 40vh;
     background-color: #0d594c;
     color: white;
 }
@@ -939,6 +942,7 @@ body.show-chatbot .chatbot-popup{
     .card img{
         height: 60%;
     }
+    
 
 }
 

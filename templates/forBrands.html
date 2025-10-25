@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Commissioner:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <title>For Brands</title>
 </head>
 <body class="bg">
@@ -17,9 +19,9 @@
 
             <ul class="nav-menu">
                     <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="{{ url_for('brands') }}" class="nav-link">For Brands</a></li>
-                    <li class="nav-item"><a href="{{ url_for( 'home' ) }}" class="nav-link">Book call</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/benedictanwachukwu456' }); return false;">Book call</a></li>
             </ul>
 
             <div class="hamburger">
@@ -44,10 +46,10 @@
             <h1>Partner With Us</h1>
             <p>At ReCircle Campus, we're building more than a marketplace. We are creating a sustainable student economy that connects students, brands, and communications in a culture of reuse.</p>
             <h2>Why partner with us?</h2>
-            <p>Direct Access to students: Connect with over 2 million Nigerian university students through pop-up markets, digital resale groups, and our online platform.</p>
-            <p>Move stock faster: Clear discounted or seasonal inventory by selling directly to students who are actively looking for affordable essentials.</p>
-            <p>Boost your brand image: Position your company as student-friendly and sustainability-driven, building long-term loyalty.</p>
-            <p>Drive community impact: support students in saving money, reducing waste, and living sustainably.</p>
+            <p> <strong class="strong"> Direct Access to students: </strong> Connect with over 2 million Nigerian university students through pop-up markets, digital resale groups, and our online platform.</p>
+            <p> <strong class="strong"> Move stock faster: </strong>  Clear discounted or seasonal inventory by selling directly to students who are actively looking for affordable essentials.</p>
+            <p> <strong class="strong"> Boost your brand image: </strong> Position your company as student-friendly and sustainability-driven, building long-term loyalty.</p>
+            <p> <strong class="strong"> Drive community impact: </strong> support students in saving money, reducing waste, and living sustainably.</p>
             <p>By partnering with ReCircle Campus, you're not just selling products, you are investing in the future of a circular, student-powered economy. Together, we can turn what students have into what they need, while shaping  a more affordable and sustainable future. </p>
             <button>Contact us to find more</button>
         </div>
@@ -65,7 +67,7 @@
                 <figure class="logotext">
                     <img src="static/images/dark brand colour and lemon green logo.png" alt="" class="logo">
                 </figure>
-                <p>Copyright <img src="static/images/copyright.png" class="copyright"> 2025 ReCircle ltd.</p>
+                <p>Copyright <img src="static/images/copyright.png" class="copyright"> 2025 ReCircle Campus Ventures.</p>
                 <p>All rights reserved</p>
 
                 <div>
@@ -96,12 +98,14 @@
             <div class="footer-btn">
                 <p>Stay up to date</p>
                 <input type="email" placeholder="johndoe@gmail.com">
-                <button>Submit</button>
+                <button>Join waitlist</button>
             </div>
     </footer>
 
 
     <script>
+        // Flask backend URL
+        const BACKEND_URL = "http://127.0.0.1:5000";
          // hamburger
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
