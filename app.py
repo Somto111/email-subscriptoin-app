@@ -254,6 +254,10 @@ def terms():
 def policy():
     return render_template('privacyPolicy.html')
 
+@app.route('/contactUs')
+def contact():
+    return render_template('contactUs.html')
+
 if __name__ == '__main__':
     print("🚀 Starting Flask app with Telegram polling...")
     print(f"📱 Monitoring Telegram chat: {CHAT_ID}")

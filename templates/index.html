@@ -39,7 +39,7 @@
     <section id="home" class="hero">
         <div class="content">
             <h1> <span class="gradient">ReCircle Campus </span> is where students save money, cut waste, buy and sell quality College essentials, student to student</h1>
-            <p>We're building a zero-waste, peer-to-peer marketplace where students buy, sell and exchange books, clothes, gadgets and more safely, affordably and sustainably all through local campus pick-up zones</p>
+
                 <form class="subscribe" action="{{ url_for('join_waitlist') }}" method="POST">
                    <input type="email"  name="email" placeholder="name@gmail.com" required>
                     <button type="submit">join waitlist</button>
@@ -181,7 +181,7 @@
                         <li><a href="#about">About us</a></li>
                         <li> <a href="{{ url_for('terms') }}">Terms of services</a></li>
                         <li> <a href="{{ url_for('policy') }}">Privacy policy</a></li>
-                        <li> <a href="">Contact us</a></li>
+                        <li> <a href="{{ url_for('contact') }}">Contact us</a></li>
                     </ul>
                 </div>
             </div>

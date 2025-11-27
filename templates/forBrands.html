@@ -51,7 +51,9 @@
             <p> <strong class="strong"> Boost your brand image: </strong> Position your company as student-friendly and sustainability-driven, building long-term loyalty.</p>
             <p> <strong class="strong"> Drive community impact: </strong> support students in saving money, reducing waste, and living sustainably.</p>
             <p>By partnering with ReCircle Campus, you're not just selling products, you are investing in the future of a circular, student-powered economy. Together, we can turn what students have into what they need, while shaping  a more affordable and sustainable future. </p>
-            <button>Contact us to find more</button>
+            <button>
+                <a href="{{ url_for('contact') }}">Contact us to find more</a>
+                </button>
         </div>
     </div>
 
@@ -90,7 +92,7 @@
                         <li><a href="{{ url_for('home') }}">About us</a></li>
                         <li> <a href="{{ url_for('terms') }}">Terms of services</a></li>
                         <li> <a href="{{ url_for('policy') }}">Privacy policy</a></li>
-                        <li> <a href="">Contact us</a></li>
+                        <li> <a href="{{ url_for('contact') }}">Contact us</a></li>
                     </ul>
                 </div>
             </div>
@@ -98,7 +100,7 @@
             <div class="footer-btn">
                 <p>Stay up to date</p>
                 <input type="email" placeholder="johndoe@gmail.com">
-                <button>Join waitlist</button>
+                <button> <a href="">Join waitlist </a></button>
             </div>
     </footer>
 
